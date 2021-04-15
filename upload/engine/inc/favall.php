@@ -24,9 +24,9 @@ if( !defined( 'DATALIFEENGINE' ) OR !defined( 'LOGGED_IN' ) ) {
 $version = [
 	'name' => 'FavALL',
 	'descr' => 'Пользовательские закладки',
-	'version' => '4.5.0.2',
+	'version' => '4.6',
 	'changelog' => [
-		'4.5.0.2' => [
+		'4.6' => [
 			'NULLED версия и адаптированная под 14.1 (by Skripters.biz)'
 		]
 	],
@@ -168,7 +168,7 @@ HTML;
 echo get_active('config');
 echo <<<HTML
 "><a href="?mod=favall&action=config" class="tip" title="Настройки модуля"><i class="icon-file-alt"></i><span>Настройки модуля</span></a></li>
-			
+
 		</ul>
 	</div>
 </div>
@@ -238,7 +238,7 @@ HTML;
 					<div class="col-md-6">
 						<span class="fav_name">
 							{$row['name_fav']}
-						</span> 
+						</span>
 						({$id_post_list_all_count})
 					</div>
 					<span class="col-md-4">[{$link_fl}]</span>
@@ -276,7 +276,7 @@ echo <<<HTML
 	<div class="panel-body">
 		<div class="dd" id="nestable">
 			<ol class="dd-list" id="default_favs">
-				{$fav_list} 
+				{$fav_list}
 			</ol>
 		</div>
 	</div>
@@ -381,7 +381,7 @@ echo <<<HTML
 		</div>
 		<div class="dd row" id="nestable_user">
 			<ol class="dd-list">
-				{$fav_list} 
+				{$fav_list}
 			</ol>
 		</div>
 	</div>
@@ -492,7 +492,7 @@ HTML;
 					try {
 						data = JSON.parse(data);
 					} catch {
-						
+
 					}
 					if (data.success) {
 						$('#default_favs').append(data.result);
@@ -503,7 +503,7 @@ HTML;
 			});
 		}
 	});
-	
+
 	$(document).on('click', '[data-favall="edit_global"]', function () {
 	    let parent = $(this).parents('.dd-content'),
 	    	grand_parent = $(parent).parents('.dd-item'),
@@ -511,7 +511,7 @@ HTML;
 	    	fav_name = $(parent).find('span.fav_name').first().text()
 	    	;
 	    DLEprompt('Укажите новое значение', fav_name, 'Закладка: ' + fav_name, function(v) {
-	       
+
 			ShowLoading('');
 			$.ajax({
 				url: 'engine/ajax/controller.php?mod=favall',
@@ -528,7 +528,7 @@ HTML;
 					try {
 						data = JSON.parse(data);
 					} catch {
-						
+
 					}
 					if (data.success) {
 					    DLEalert(data.result, 'Успех!');
@@ -540,7 +540,7 @@ HTML;
 			});
 	    });
 	});
-	
+
 	$(document).on('click', '[data-favall="delete_global"]', function () {
 	    let parent = $(this).parents('.dd-content'),
 	    	grand_parent = $(parent).parents('.dd-item'),
@@ -548,7 +548,7 @@ HTML;
 	    	fav_name = $(parent).find('span.fav_name').first().text()
 	    	;
 	    DLEconfirm('Вы точно хотите удалить "' + fav_name + '"?', 'Закладка: ' + fav_name, function() {
-	       
+
 			ShowLoading('');
 			$.ajax({
 				url: 'engine/ajax/controller.php?mod=favall',
@@ -564,7 +564,7 @@ HTML;
 					try {
 						data = JSON.parse(data);
 					} catch {
-						
+
 					}
 					if (data.success) {
 					    DLEalert(data.result, 'Успех!');
@@ -576,7 +576,7 @@ HTML;
 			});
 	    });
 	});
-	
+
 	$(document).on('click', '[data-favall="edit_user"]', function () {
 	    let parent = $(this).parents('.dd-content'),
 	    	grand_parent = $(parent).parents('.dd-item'),
@@ -584,7 +584,7 @@ HTML;
 	    	fav_name = $(parent).find('span.fav_name').first().text()
 	    	;
 	    DLEprompt('Укажите новое значение', fav_name, 'Закладка: ' + fav_name, function(v) {
-	       
+
 			ShowLoading('');
 			$.ajax({
 				url: 'engine/ajax/controller.php?mod=favall',
@@ -601,7 +601,7 @@ HTML;
 					try {
 						data = JSON.parse(data);
 					} catch {
-						
+
 					}
 					if (data.success) {
 					    DLEalert(data.result, 'Успех!');
@@ -613,7 +613,7 @@ HTML;
 			});
 	    });
 	});
-	
+
 	$(document).on('click', '[data-favall="delete_user"]', function () {
 	    let parent = $(this).parents('.dd-content'),
 	    	grand_parent = $(parent).parents('.dd-item'),
@@ -621,7 +621,7 @@ HTML;
 	    	fav_name = $(parent).find('span.fav_name').first().text()
 	    	;
 	    DLEconfirm('Вы точно хотите удалить "' + fav_name + '"?', 'Закладка: ' + fav_name, function() {
-	       
+
 			ShowLoading('');
 			$.ajax({
 				url: 'engine/ajax/controller.php?mod=favall',
@@ -637,7 +637,7 @@ HTML;
 					try {
 						data = JSON.parse(data);
 					} catch {
-						
+
 					}
 					if (data.success) {
 					    DLEalert(data.result, 'Успех!');
@@ -649,14 +649,14 @@ HTML;
 			});
 	    });
 	});
-	
+
 	jQuery(function($){
 		$('.dd').nestable({
 			maxDepth: 500
 		});
 
 		$('.dd').nestable('collapseAll');
-		
+
 		$('.dd-handle a').on('mousedown', function(e){
 			e.stopPropagation();
 		});
@@ -676,7 +676,7 @@ HTML;
 				$('.dd').nestable('collapseAll');
 			}
 		});
-		
+
 		$('#nestable').nestable().on('change',function(){
 			ShowLoading('');
 			$.ajax({
@@ -693,7 +693,7 @@ HTML;
 					try {
 						data = JSON.parse(data);
 					} catch {
-						
+
 					}
 					if (data.success === false) {
 						DLEalert(data.result, 'Ошибка');
@@ -711,7 +711,7 @@ HTML;
 
 <div class="footer text-muted text-size-small" style="bottom: 50px;">
 	Автор оригинала: D0Gmatist / Site: <a href="http://d0gmatist.pro/" target="_blank">http://d0gmatist.pro/</a> /Skype: D0Gmatist / Email: 375256232834@yandex.by<br>
-	Правки под 14.1: MaHarder (<a href="https://devcraft.club" target="_blank">DevCraftClub</a>) & 
+	Правки под 14.1: MaHarder (<a href="https://devcraft.club" target="_blank">DevCraftClub</a>) &
 	SaNcHeS (специально для <a href="https://skripters.biz" target="_blank">https://skripters.biz</a>, 2021
 </div>
 HTML;

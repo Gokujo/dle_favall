@@ -1,0 +1,715 @@
+/* btn post */
+.favall_btn {
+	background: #2980B9;
+	border-bottom: 3px solid #236FA1;
+	color: #ffffff;
+	cursor: pointer;
+	font: normal 16px/38px "Trebuchet MS", sans-serif;
+	margin: 0 5px;
+	padding: 0 15px;
+	text-shadow: 0 -1px 0px #0967B5;
+	transition: all 0.2s;
+	}
+.favall_btn:hover {
+	background: #61A7E0;
+	}
+/* dlepopup */
+.dlepopup_favall {
+	position: fixed;
+	}
+.ui-widget-overlay {
+	background: rgba(0, 0, 0, 0.25);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	}
+#dlepopup > br {
+	display: none;
+	}
+.favall_all_p {
+	background: #ECFBFF;
+	border: 1px solid #236FA1;
+	   
+			
+	max-height: 300px;
+	overflow-x: auto;
+	padding: 1px 2px;
+	}
+.favall_all_p .favall_p {
+	background: #93BFDB;
+	border: 1px solid #236FA1;
+	   
+			
+	display: block;
+	font-family: kelson_sans_rulight, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	margin: 2px 1px;
+	overflow: hidden;
+	position: relative;
+	height: 26px;
+	}
+.favall_all_p .favall_p.active {
+	background: #ECFBFF;
+	}
+.favall_all_p .favall_p:after {
+	content:" ";
+	display:table;
+	clear:both;
+	}
+.favall_all_p .favall_p .favall_name {
+	left: 0;
+	line-height: 20px;
+	margin: 3px;
+	overflow: hidden;
+	position: absolute;
+	right: 121px;
+	height: 20px;
+	}
+.favall_all_p .favall_p .favall_sum {
+	background: #34495E;
+	color: #FFFFFF;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transition: all 0.2s;
+	height: 26px;
+	width: 50px;
+	}
+.favall_all_p .favall_p .favall_add_dell {	
+	color: #cccccc;
+	cursor: pointer;
+	font-size: 33px;
+	font-weight: 700;
+	line-height: 26px;
+	position: absolute;
+	right: 50px;
+	text-align: center;
+	transition: all 0.2s;
+	height: 26px;
+	width: 30px;
+	}
+.favall_all_p .favall_p .favall_add_dell.favall_add {
+	background: #1ABC9C;
+	line-height: 28px;
+	}
+.favall_all_p .favall_p .favall_add_dell.favall_dell {
+	background: #E74C3C;
+	line-height: 24px;
+	}
+.favall_all_p .favall_p .favall_add_dell.favall_add:hover {
+	color: #ffffff;
+	}
+.favall_all_p .favall_p .favall_add_dell.favall_dell:hover {
+	color: #ffffff;
+	}
+.favall_all_p .favall_p .favall_url {
+	background: #2980B9;	
+	color: #FFFFFF;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 22px;
+	margin: 0;
+	padding: 0 0 0 1px;
+	position: absolute;
+	right: 80px;
+	text-align: center;
+	text-decoration: none;
+	top: 0;
+	transition: all 0.2s;
+	height: 26px;
+	width: 40px;
+	}
+.favall_all_p .favall_p .favall_url:hover {
+	background: #236fa1;
+	text-decoration: none;
+	}
+/****************/
+.favall_url {
+    margin: 1px 0;
+    padding: 0 8px !important;
+	}
+.favall_login_panel {
+    font-family: kelson_sans_rulight,Arial,Helvetica,sans-serif;
+    font-size: 15px;    
+    line-height: 23px;
+	}
+.favall_profile {
+    font-family: kelson_sans_rulight,Arial,Helvetica,sans-serif;
+    font-size: 18px;    
+    line-height: 23px;
+	}
+.favall_profile_popup {
+    font-family: kelson_sans_rulight,Arial,Helvetica,sans-serif;
+    font-size: 16px;    
+    line-height: 20px;
+	}
+.favall_login_panel .favall_url {
+    display: block;
+    text-decoration: none;
+    text-shadow: 0 0 0 !important;
+	}
+.favall_profile .favall_url {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+	}
+.favall_profile_popup .favall_url {
+    display: block;
+    width: 361px;
+	}
+a.favall_url:after {
+    background: rgba(0, 0, 0, 0) !important;
+	}
+.favall_login_panel span {
+    color: #939393;
+	}
+.favall_url.favall_url1 {
+    background: rgba(242, 242, 242, 0.1);
+	}
+a.favall_url.favall_url1:hover {
+    background: rgba(242, 242, 242, 0);
+	}
+.favall_url.favall_url2 {
+    background: rgba(0, 0, 0, 0.1);
+	}
+a.favall_url.favall_url1:hover, 
+a.favall_url.favall_url2:hover {
+    background: rgba(242, 242, 242, 0);
+	}
+/****************/
+.favall_block{
+    background: #ECFBFF;
+    border: 1px solid #236FA1;
+    margin-bottom: 10px;
+	}
+.favall_block_t{
+    background: #2980B9;
+    border-bottom: 3px solid #236FA1;
+    color: #ffffff;
+    font: normal 21px/24px kelson_sans_rulight, Arial, Helvetica, sans-serif;
+    padding: 6px 5px 5px 5px;
+	}
+.favall_block_c {
+    display: block;
+	}
+.favall_block_c2 {
+    background: #93BFDB;
+    margin: 5px;
+    padding: 1px;
+	}
+.favall_block_p {
+    display: block;
+	}
+.favall_block_p2 {
+    padding: 0 5px;
+	}
+.no_def_favall {
+    background: #FFDADA;
+    font-size: 12px;
+    margin: 5px 0;
+    padding: 5px 0;
+    text-align: center;
+	}
+.no_user_favall {
+    background: #FFDADA;
+    font-size: 12px;    
+    margin: 5px 0 0;
+    padding: 5px 0;
+    text-align: center;
+	}
+.favall_block_p_l{
+    display: inline-block;
+    padding: 5px;
+    text-align: right;
+    vertical-align: middle;
+    width: 215px;
+	}
+.favall_block_p_r {
+    display: inline-block;
+    padding: 5px;
+    vertical-align: middle;
+	}
+.favall_block_p_r .faval_input[type="text"] {
+    margin: 0;
+    width: 250px;
+	}
+.faval_btn_add {
+	background: #1ABC9C;
+	border-bottom: 3px solid #16A085;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font: normal 16px/32px "Trebuchet MS", sans-serif;
+	margin: 0 5px;
+	padding: 0 15px;
+	text-shadow: 0 -1px 0px #118C74;
+	transition: all 0.2s;
+	}
+.faval_btn_add:hover {
+	background: #35D2B3;
+	}
+.faval_btn_save {
+	background: #2980B9;
+	border-bottom: 3px solid #236FA1;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font: normal 16px/32px "Trebuchet MS", sans-serif;
+	margin: 5px;
+	padding: 0 15px;
+	text-shadow: 0 -1px 0px #0967B5;
+	transition: all 0.2s;
+	}
+.faval_btn_save:hover {
+	background: #61A7E0;
+	}
+.favall_block_p_i {
+    background: #93BFDB;
+    display: block;
+    font-size: 11px;
+    line-height: 11px;
+    padding: 3px;
+    text-align: center;
+	}
+.def_list_form {
+    display:block;
+    height:30px;
+    margin:5px 0;
+    padding: 5px 10px 5px 40px;
+    color:#333;
+    text-decoration:none;
+    font-weight:bold;
+    border:1px solid #ccc;
+    background:#fafafa;
+    background:-webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
+       background:-moz-linear-gradient(top, #fafafa 0%, #eee 100%);
+    		background:linear-gradient(top, #fafafa 0%, #eee 100%);
+    -webkit-border-radius:3px;
+    		border-radius:3px;
+    -moz-box-sizing:border-box;
+    	 box-sizing:border-box;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+	}
+.def_list1 {
+    float:left;
+    margin:0 0 0 10px;
+    overflow:hidden;
+    width:250px;
+	}
+.def_list2 {
+	left: 345px;
+	overflow: hidden;
+	position: absolute;
+	right: 55px;
+	}
+.def_list2 a:hover {
+	color: #E70505;
+	text-decoration: none;
+	}
+/********************/
+.dd {
+    position:relative;
+    display:block;
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size:13px;
+    line-height:20px;
+	}
+.dd-list {
+    display:block;
+    position:relative;
+    margin:0;
+    padding:0;
+    list-style:none;
+	}
+.dd-list .dd-list {
+    padding-left:30px;
+	}
+.dd-collapsed .dd-list {
+    display:none;
+	}
+.dd-item,
+.dd-empty,
+.dd-placeholder {
+    display:block;
+    position:relative;
+    margin:0;
+    padding:0;
+    min-height:20px;
+    font-size:13px;
+    line-height:20px;
+	}
+.dd-handle {
+    display:block;
+    height:30px;
+    margin:5px 0;
+    padding:5px 10px;
+    color:#333;
+    text-decoration:none;
+    font-weight:bold;
+    border:1px solid #ccc;
+    background:#fafafa;
+    background:-webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
+       background:-moz-linear-gradient(top, #fafafa 0%, #eee 100%);
+    		background:linear-gradient(top, #fafafa 0%, #eee 100%);
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	}
+.dd-handle:hover {
+    color:#2ea8e5;
+    background:#fff;
+	}
+.dd-item > button {
+    display:block;
+    position:relative;
+    cursor:pointer;
+    float:left;
+    width:25px;
+    height:20px;
+    margin:5px 0;
+    padding:0;
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    border:0;
+    background:transparent;
+    font-size:12px;
+    line-height:1;
+    text-align:center;
+    font-weight:bold;
+	}
+.dd-item > button:before {
+    content:'+';
+    display:block;
+    position:absolute;
+    width:100%;
+    text-align:center;
+    text-indent:0;
+	}
+.dd-item > button[data-action="collapse"]:before {
+    content:'-';
+	}
+.dd-placeholder, .dd-empty {
+    margin:5px 0;
+    padding:0;
+    min-height:30px;
+    background:#f2fbff;
+    border:1px dashed #b6bcbf;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	}
+.dd-empty {
+    border:1px dashed #bbb;
+    min-height:100px;
+    background-color:#e5e5e5;
+    background-image:-webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), -webkit-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-image:-moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), -moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-image:linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
+    background-size:60px 60px;
+    background-position:0 0, 30px 30px;
+	}
+.dd-dragel {
+    font-family:verdana;
+    position:absolute;
+    pointer-events:none;
+    z-index:9999;
+	}
+.dd-dragel > .dd-item .dd-handle {
+    margin-top:0;
+	}
+.dd-dragel .dd-handle {
+    -webkit-box-shadow:2px 4px 6px 0 rgba(0, 0, 0, .1);
+    		box-shadow:2px 4px 6px 0 rgba(0, 0, 0, .1);
+	}
+.nestable-lists {
+    display:block;
+    clear:both;
+    padding:30px 0;
+    width:100%;
+    border:0;
+    border-top:2px solid #ddd;
+    border-bottom:2px solid #ddd;
+	}
+#nestable-menu {
+    padding:0;
+    margin:20px 0;
+	}
+#nestable-output,
+#nestable2-output {
+    width:100%;
+    height:7em;
+    font-size:0.75em;
+    line-height:1.333333em;
+    padding:5px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	}
+#nestable2 .dd-handle {
+    color:#fff;
+    border:1px solid #999;
+    background:#bbb;
+    background:-webkit-linear-gradient(top, #bbb 0%, #999 100%);
+       background:-moz-linear-gradient(top, #bbb 0%, #999 100%);
+    		background:linear-gradient(top, #bbb 0%, #999 100%);
+	}
+#nestable2 .dd-handle:hover {
+    background:#bbb;
+	}
+#nestable2 .dd-item > button:before {
+    color:#fff;
+	}
+.dd-hover > .dd-handle {
+    background:#2ea8e5 !important;
+	}
+.dd3-content {
+    display:block;
+    height:30px;
+    margin:5px 0;
+    padding:5px 10px 5px 40px;
+    color:#333;
+    text-decoration:none;
+    font-weight:bold;
+    border:1px solid #ccc;
+    background:#fafafa;
+    background:-webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
+       background:-moz-linear-gradient(top, #fafafa 0%, #eee 100%);
+    		background:linear-gradient(top, #fafafa 0%, #eee 100%);
+    -webkit-border-radius:3px;
+    		border-radius:3px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+	}
+.dd3-content:hover {
+    color:#2ea8e5;
+    background:#fff;
+	}
+.dd-dragel > .dd3-item > .dd3-content {
+    margin:0;
+	}
+.dd3-item > button {
+    margin-left:30px;
+	}
+.dd3-handle {
+    position:absolute;
+    margin:0;
+    left:0;
+    top:0;
+    cursor:pointer;
+    width:30px;
+    text-indent:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    border:1px solid #aaa;
+    background:#ddd;
+    background:-webkit-linear-gradient(top, #ddd 0%, #bbb 100%);
+       background:-moz-linear-gradient(top, #ddd 0%, #bbb 100%);
+    		background:linear-gradient(top, #ddd 0%, #bbb 100%);
+    border-bottom-right-radius:0;
+       border-top-right-radius:0;
+    z-index:100;
+	}
+.dd3-handle:before {
+    content:'≡';
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    text-align:center;
+    text-indent:0;
+    color:#5C5C5C;
+    font-size:26px;
+    line-height:26px;
+    font-weight:normal;
+    text-shadow:0 1px 0 #fff;
+	}
+.dd3-handle:hover {
+    background:#ddd;
+	}
+.list_form {
+    font-size:12px;
+    font-weight:400;
+    position:relative;
+	}
+.list_form b {
+    float:left;
+    width:40px;
+	}
+.list1 {
+    float:left;
+    margin:0 0 0 10px;
+    overflow:hidden;
+    width:250px;
+	}
+.list2 {
+    left:345px;
+    overflow:hidden;
+    position:absolute;
+    right: 65px;
+	}
+.list2 a:hover {
+    color:#E70505;
+    text-decoration: none;
+	}
+.list3 {
+    float:right;
+    text-align:right;
+    height:20px;
+    width: 50px;
+	}
+.list3 div {
+    cursor:pointer;
+    display:inline-block;
+    padding: 2px;
+    height: 16px;
+    width: 16px;
+	}
+.favall_edit {
+    background: url(../img/notepad.png) 0 0 no-repeat;
+	}
+.favall_dell {
+    background: url(../img/delete.png) 0 0 no-repeat;
+	}
+/**********************/
+.favall_catalog_form1 {
+    background: #ECF0F1;
+    border: 1px solid #236FA1;
+    margin-bottom: 10px;
+	}
+.favall_catalog_form1:after {
+	content:" ";
+	display:table;
+	clear:both;
+	}
+.favall_catalog_btl {
+    background: #2980B9;
+    border-bottom: 3px solid #236FA1;
+    color: #ecf0f1;
+    display: block;
+    font-family: kelson_sans_rulight, Arial, Helvetica, sans-serif;    
+    font-size: 28px;    
+    line-height: 34px;    
+    padding: 5px 10px 2px;
+    vertical-align: middle;    
+    height: 34px;
+	}
+.favall_catalog_bl {
+    border: 1px solid #236FA1;
+    float: left;
+    margin: 5px 0 5px 5px;
+    width: 237px;
+	}
+.favall_catalog_bl .favall_catalog_bl1 {
+    background: #93BFDB;
+    border-bottom: 1px solid #236FA1;
+    color: #000000;    
+    font-size: 13px;    
+    line-height: 16px;
+    padding: 5px;
+	}
+.favall_catalog_bl .favall_catalog_bl2 {
+    background: #ECFBFF;
+    padding: 5px;
+	}
+.favall_catalog_bl .favall_catalog_bl2 input {
+    margin: 0;
+    width: 203px;
+	}
+.favall_catalog_bl .favall_catalog_bl2 .select {
+    margin: 0;    
+    width: 168px;
+	}
+.favall_catalog_form {
+    background: #ECF0F1;
+    border: 1px solid #236FA1;
+    margin-bottom: 10px;
+    padding: 10px 5px 0;
+    text-align: center;
+	}
+.favall_catalog_form:after {
+	content:" ";
+	display:table;
+	clear:both;
+	}
+.catalog_list {
+    border: 1px solid #236FA1;
+    float: left;
+    font-size: 14px;
+    margin: 0 5px 10px;
+    text-align: center;
+    height: 191px;
+    width: 230px;
+	}
+.catalog_list_n {
+    background: #2980B9;
+    border-bottom: 3px solid #236FA1;
+    color: #ecf0f1;    
+    font-family: kelson_sans_rulight, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 5px 0;
+    vertical-align: middle;
+    height: 40px;
+	}
+.catalog_list_l {
+    color: #FFFFFF;
+	}
+.catalog_list_l:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+	}
+.catalog_list_ln {
+    color: #FFFFFF;
+    font-size: 14px;
+	}
+.catalog_list_ua {
+    background: #ECFBFF;
+    display: block;
+    padding: 5px;
+    height: 100px;
+	}
+.catalog_list_r {
+    background: #93BFDB;
+    font-size: 18px;    
+    line-height: 28px;
+	}
+.catalog_list_r a {
+    color: #236FA1;
+    text-decoration: none;
+	}
+.catalog_list_r a:hover {
+    color: #052C45;
+	}
+.favall_catalog_btn {
+	background: #2980B9;
+	border-bottom: 3px solid #236FA1;
+	color: #ffffff;
+	cursor: pointer;
+	font: normal 16px/38px "Trebuchet MS", sans-serif;
+	margin: 0 5px 10px;
+	padding: 0 15px;
+	text-shadow: 0 -1px 0px #0967B5;
+	transition: all 0.2s;
+	}
+.favall_catalog_btn:hover {
+	background: #61A7E0;
+	}
+
+
+
+
+
+

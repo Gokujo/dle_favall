@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dleplugin>
+	<name>FavAll</name>
+	<description>Модуль позволяет добавлять пользователям собственные закладки</description>
+	<icon></icon>
+	<version>4.6</version>
+	<dleversion>14.0</dleversion>
+	<versioncompare>greater</versioncompare>
+	<upgradeurl></upgradeurl>
+	<filedelete>1</filedelete>
+	<needplugin></needplugin>
+	<mnotice>1</mnotice>
+	<mysqlinstall><![CDATA[CREATE TABLE IF NOT EXISTS `{prefix}_favall` (
+  `id_fav` smallint(5) NOT NULL AUTO_INCREMENT,
+  `position_fav` smallint(5) NOT NULL DEFAULT '0',
+  `name_fav` varchar(50) NOT NULL,
+  `type_fav` tinyint(1) NOT NULL,
+  `user_id_fav` int(11) NOT NULL,
+  PRIMARY KEY (`id_fav`)
+) ENGINE={engine}  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `{prefix}_favall_user` (
+  `id_list` int(11) NOT NULL AUTO_INCREMENT,
+  `id_fav_list` smallint(5) NOT NULL,
+  `id_user_list` int(11) NOT NULL,
+  `id_post_list` int(11) NOT NULL,
+  PRIMARY KEY (`id_list`)
+) ENGINE={engine}  DEFAULT CHARSET=utf8;]]></mysqlinstall>
+	<mysqlupgrade><![CDATA[]]></mysqlupgrade>
+	<mysqlenable><![CDATA[INSERT INTO `{prefix}_admin_sections` ( `name`, `title`, `descr`, `icon`, `allow_groups` ) VALUES ( 'favall', 'FavAll', 'Управление закладками', 'favall.png', '1' );]]></mysqlenable>
+	<mysqldisable><![CDATA[DELETE FROM `{prefix}_admin_sections` WHERE name = 'favall';]]></mysqldisable>
+	<mysqldelete><![CDATA[DROP TABLE `{prefix}_favall`;
+DROP TABLE `{prefix}_favall_user`;]]></mysqldelete>
+	<phpinstall><![CDATA[]]></phpinstall>
+	<phpupgrade><![CDATA[]]></phpupgrade>
+	<phpenable><![CDATA[]]></phpenable>
+	<phpdisable><![CDATA[]]></phpdisable>
+	<phpdelete><![CDATA[]]></phpdelete>
+	<notice><![CDATA[<b>Адаптация для DLE 14.x</b>: <a href="https://devcraft.club?ref=favall" target="_blank">MaHarder</a> & SaNcHeS (специально для <a href="https://skripters.biz" target="_blank">SkriptersBiz</a>)]]></notice>
+	<file name="engine/engine.php">
+		<operation action="before">
+			<searchcode><![CDATA[	case "feedback" :
+		include (DLEPlugins::Check(ENGINE_DIR . '/modules/feedback.php'));
+		break;]]></searchcode>
+			<replacecode><![CDATA[/* favall v.4.2.0 */
+	case "favall" :
+		include (DLEPlugins::Check(ENGINE_DIR . '/modules/favall/favall.php'));
+		break;
+/* favall v.4.2.0 */]]></replacecode>
+		</operation>
+		<operation action="after">
+			<searchcode><![CDATA[elseif ($do == 'favorites') $nam_e = $lang['title_fav'];]]></searchcode>
+			<replacecode><![CDATA[/* favall v.4.2.0 */
+elseif ( $do == 'favall' ) {
+	$nam_e = $name_fav;
+	create_keywords( $nam_e );
+	if ( $_GET['cstart'] ) {
+		$nam_e = $nam_e . ' » Страница ' . $cstart;
+
+	}
+
+	$disable_index = TRUE;
+
+}
+/* favall v.4.2.0 */]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/init.php">
+		<operation action="before">
+			<searchcode><![CDATA[$tpl->compile( 'login_panel' );]]></searchcode>
+			<replacecode><![CDATA[/* favall v.4.2.0 */
+$type_favall = 'login_panel';
+include (DLEPlugins::Check(ENGINE_DIR . '/modules/favall/favall_link.php'));
+$tpl->set( '{favall_link}', $favall_link );
+/* favall v.4.2.0 */]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/profile.php">
+		<operation action="before">
+			<searchcode><![CDATA[$tpl->compile( 'content' );]]></searchcode>
+			<replacecode><![CDATA[/* favall v.4.2.0 */
+	$type_favall = 'profile';
+	include (DLEPlugins::Check(ENGINE_DIR . '/modules/favall/favall_link.php'));
+	$tpl->set( '{favall_link}', $favall_link );
+/* favall v.4.2.0 */]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/ajax/profile.php">
+		<operation action="before">
+			<searchcode><![CDATA[$tpl->compile( 'content' );]]></searchcode>
+			<replacecode><![CDATA[/* favall v.4.2.0 */
+$type_favall = 'profile_popup';
+include (DLEPlugins::Check(ENGINE_DIR . '/modules/favall/favall_link.php'));
+$tpl->set( '{favall_link}', $favall_link );
+/* favall v.4.2.0 */]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/modules/show.short.php">
+		<operation action="replace">
+			<searchcode><![CDATA[			$tpl->set( '{full-story}',  $row['full_story'] );
+
+		
+		} else {]]></searchcode>
+			<replacecode><![CDATA[/* favall v.4.6 */
+			$tpl->set( '{full-story}',  $row['full_story'] );
+
+	} elseif ( $tpl_favall == TRUE ) { $tpl->load_template( 'favall/favall.tpl' ); 
+    } else {
+/* favall v.4.6 */]]></replacecode>
+			<searchcount>1</searchcount>
+		</operation>
+	</file>
+</dleplugin>

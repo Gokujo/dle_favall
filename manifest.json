@@ -1,0 +1,18 @@
+{
+	"version"	: 	"4.6",
+	"name"		:	"DLE FavAll",
+	"author"	:	[
+		{
+			"name"	:	"d0gmatist",
+			"link"	:	""
+		},
+		{
+			"name"	:	"MaHarder",
+			"link"	:	"https://devcraft.club"
+		},
+		{
+			"name"	:	"SaNcHeS",
+			"link"	:	"https://skripters.biz"
+		}
+	]
+}

@@ -36,7 +36,8 @@ DROP TABLE `{prefix}_favall_user`;]]></mysqldelete>
 	<phpenable><![CDATA[]]></phpenable>
 	<phpdisable><![CDATA[]]></phpdisable>
 	<phpdelete><![CDATA[]]></phpdelete>
-	<notice><![CDATA[<b>Адаптация для DLE 14.x</b>: <a href="https://devcraft.club?ref=favall" target="_blank">MaHarder</a> & SaNcHeS (специально для <a href="https://skripters.biz" target="_blank">SkriptersBiz</a>)]]></notice>
+	<notice><![CDATA[<b>Адаптация для DLE 14.x</b>: <a href="https://devcraft.club?ref=favall" target="_blank">MaHarder</a> & SaNcHeS (специально для <a href="https://skripters.biz" target="_blank">SkriptersBiz</a>)<br>
+<a href="https://github.com/Gokujo/dle_favall" target="_blank">Документация</a>]]></notice>
 	<file name="engine/engine.php">
 		<operation action="before">
 			<searchcode><![CDATA[	case "feedback" :

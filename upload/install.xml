@@ -3,7 +3,7 @@
 	<name>FavAll</name>
 	<description>Модуль позволяет добавлять пользователям собственные закладки</description>
 	<icon></icon>
-	<version>4.6</version>
+	<version>4.6.1</version>
 	<dleversion>14.0</dleversion>
 	<versioncompare>greater</versioncompare>
 	<upgradeurl></upgradeurl>
@@ -36,8 +36,8 @@ DROP TABLE `{prefix}_favall_user`;]]></mysqldelete>
 	<phpenable><![CDATA[]]></phpenable>
 	<phpdisable><![CDATA[]]></phpdisable>
 	<phpdelete><![CDATA[]]></phpdelete>
-	<notice><![CDATA[<b>Адаптация для DLE 14.x</b>: <a href="https://devcraft.club?ref=favall" target="_blank">MaHarder</a> & SaNcHeS (специально для <a href="https://skripters.biz" target="_blank">SkriptersBiz</a>)<br>
-<a href="https://github.com/Gokujo/dle_favall" target="_blank">Документация</a>]]></notice>
+	<notice><![CDATA[<b>Адаптация для DLE 14.x</b>: MaHarder (https://devcraft.club) & SaNcHeS (SkriptersBiz)<br>
+<b>Документация:</b> https://github.com/Gokujo/dle_favall]]></notice>
 	<file name="engine/engine.php">
 		<operation action="before">
 			<searchcode><![CDATA[	case "feedback" :
@@ -78,7 +78,7 @@ $tpl->set( '{favall_link}', $favall_link );
 	</file>
 	<file name="engine/modules/profile.php">
 		<operation action="before">
-			<searchcode><![CDATA[$tpl->compile( 'content' );]]></searchcode>
+			<searchcode><![CDATA[$tpl->compile( 'content']]></searchcode>
 			<replacecode><![CDATA[/* favall v.4.2.0 */
 	$type_favall = 'profile';
 	include (DLEPlugins::Check(ENGINE_DIR . '/modules/favall/favall_link.php'));
@@ -88,7 +88,7 @@ $tpl->set( '{favall_link}', $favall_link );
 	</file>
 	<file name="engine/ajax/profile.php">
 		<operation action="before">
-			<searchcode><![CDATA[$tpl->compile( 'content' );]]></searchcode>
+			<searchcode><![CDATA[$tpl->compile( 'content']]></searchcode>
 			<replacecode><![CDATA[/* favall v.4.2.0 */
 $type_favall = 'profile_popup';
 include (DLEPlugins::Check(ENGINE_DIR . '/modules/favall/favall_link.php'));

@@ -399,7 +399,7 @@ HTML;
 	if ( $_POST) {
 		$favall_con = $_POST['favall_con'];
 		if ( $favall_config ) {
-			$favall_con = $favall_con + $favall_config;
+			$favall_con = array_merge_recursive($favall_config, $favall_con);
 
 		}
 

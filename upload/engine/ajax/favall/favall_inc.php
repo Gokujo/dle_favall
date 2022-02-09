@@ -55,10 +55,12 @@ if ($fav_type == "add") {
     if ($json["success"] == true) {
         $bad_words = explode("|~|", $favall_config["bad_words"]);
         foreach ($bad_words as $i) {
-            if (preg_match("/" . $i . "/i", $fav_name)) {
-                $json["success"] = false;
-                $json["result"] = "Поле \"Имя\" содержит не допустимое слово.";
-            }
+			if(!empty($i)) {
+				if (preg_match("/{$i}/i", $fav_name)) {
+					$json["success"] = false;
+					$json["result"]  = "Поле \"Имя\" содержит не допустимое слово.";
+				}
+			}
         }
     }
     if ($json["success"] == true && preg_match("/[\\||\\'|\\<|\\>|\\[|\\]|\"|\\!|\\?|\$|\\@|\\/|\\\\|\\&\\~\\*\\{\\+\\,\\.]/", $fav_name)) {

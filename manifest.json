@@ -1,7 +1,10 @@
 {
 	"version"	: 	"4.6.1",
 	"name"		:	"DLE FavAll",
-	"dle"		:	"14.x, 15.x",
+	"dle"		:	[
+		"14.x",
+		"15.x"
+	],
 	"author"	:	[
 		"d0gmatist",
 		"MaHarder",

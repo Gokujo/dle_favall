@@ -1,9 +1,12 @@
-# DLE FavAll
+# DLE FavAll ![Версия модуля](https://img.shields.io/github/manifest-json/v/Gokujo/dle_favall?color=success&filename=manifest.json&label=%D0%92%D0%B5%D1%80%D1%81%D0%B8%D1%8F&style=for-the-badge)
+
 Пользовательские закладки
 
-![Версия модуля](https://img.shields.io/github/manifest-json/v/Gokujo/dle_favall?color=success&filename=manifest.json&label=%D0%92%D0%B5%D1%80%D1%81%D0%B8%D1%8F&style=flat-square)![Версия DLE](https://img.shields.io/badge/dynamic/json?color=orange&label=DLE&query=dle&url=https%3A%2F%2Fraw.githubusercontent.com%2FGokujo%2Fdle_favall%2Fmain%2Fmanifest.json&style=flat-square)
+![](https://img.shields.io/github/downloads/Gokujo/dle_favall/total?label=Загрузок&style=flat-square)![](https://img.shields.io/github/release-date/Gokujo/dle_favall?label=%D0%94%D0%B0%D1%82%D0%B0%20%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8&style=flat-square)![](https://img.shields.io/github/issues/Gokujo/dle_favall?color=red&label=%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC&style=flat-square)
 
-![Авторство](https://img.shields.io/badge/dynamic/json?color=blue&label=Автор&query=author&url=https%3A%2F%2Fraw.githubusercontent.com%2FGokujo%2Fdle_favall%2Fmain%2Fmanifest.json&style=flat-square)
+![Версия DLE](https://img.shields.io/github/manifest-json/dle/Gokujo/dle_favall?color=orange&label=DLE&style=flat-square)
+
+![Авторство](https://img.shields.io/github/manifest-json/author/Gokujo/dle_favall?label=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA&style=flat-square)
 
 
 ## Описание:
